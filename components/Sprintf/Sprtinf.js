@@ -11,16 +11,17 @@ export default class SprtinfComponent extends Component {
     ]);
   }
 
-  getText(type) {
-    return sprintf('I really love %(foodStuff)s', {
+  getText(i18n, type) {
+    return sprintf(i18n.get('foodStuff'), {
       foodStuff: this.words.get(type),
     });
   }
 
   render() {
+    const { i18n, type } = this.props;
     return (
       <div>
-        {this.getText(this.props.type)}
+        {this.getText(i18n, type)}
       </div>
     );
   }
@@ -28,4 +29,5 @@ export default class SprtinfComponent extends Component {
 
 SprtinfComponent.propTypes = {
   type: PropTypes.number,
+  i18n: PropTypes.object,
 };
