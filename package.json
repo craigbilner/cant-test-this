@@ -4,7 +4,7 @@
   "description": "a few example of react testing anti-patterns",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./components/**/*.js --compilers js:babel-core/register",
+    "test": "mocha ./components/**/*.tests.js --compilers js:babel-core/register",
     "posttest": "npm run lint",
     "lint": "eslint ./components/**/*.js"
   },
