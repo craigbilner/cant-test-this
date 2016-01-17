@@ -1,8 +1,9 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import rct from 'react-component-tester';
-import Sprintf from './Sprtinf';
+import Sprintf from './Sprintf';
 import TYPES from '../../types';
+
 
 const tester = rct.create({
   spyOnDefault: false,
