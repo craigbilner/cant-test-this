@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { sprintf } from 'sprintf-js';
 import TYPES from '../../types';
 
-export default class SprtinfComponent extends Component {
+export default class SprintfComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,7 @@ export default class SprtinfComponent extends Component {
   }
 }
 
-SprtinfComponent.propTypes = {
+SprintfComponent.propTypes = {
   type: PropTypes.number,
   i18n: PropTypes.object,
 };
