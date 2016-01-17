@@ -96,4 +96,27 @@ describe('nested children tests should', () => {
       assert.deepEqual(actual, expected);
     });
   });
+
+  describe('but if we really have to', () => {
+    it('found child one', () => {
+      const actual = BASIC_TEST.findChild('0.0.0').type;
+      const expected = RandomChildOne;
+
+      assert.deepEqual(actual, expected);
+    });
+
+    it('found child two', () => {
+      const actual = BASIC_TEST.findChild('0.1.0.0.1.0.0').type;
+      const expected = RandomChildTwo;
+
+      assert.deepEqual(actual, expected);
+    });
+
+    it('found child three', () => {
+      const actual = BASIC_TEST.findChild('0.1.0.1.0.0').type;
+      const expected = RandomChildThree;
+
+      assert.deepEqual(actual, expected);
+    });
+  });
 });
