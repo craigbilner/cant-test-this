@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import { sprintf } from 'sprintf-js';
-import TYPES from '../../types';
+const React = require('react');
+const sprintf = require('sprintf-js').sprintf;
+const TYPES = require('../../types');
 
-export default class SprintfComponent extends Component {
+class SprintfComponent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,6 +28,8 @@ export default class SprintfComponent extends Component {
 }
 
 SprintfComponent.propTypes = {
-  type: PropTypes.number,
-  i18n: PropTypes.object,
+  type: React.PropTypes.number,
+  i18n: React.PropTypes.object,
 };
+
+module.exports = SprintfComponent;
