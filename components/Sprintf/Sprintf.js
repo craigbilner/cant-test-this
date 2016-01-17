@@ -7,7 +7,7 @@ class SprintfComponent extends React.Component {
     super(props);
 
     this.words = new Map([
-      [TYPES.CHOCOLATE, 'chocolate'],
+      [TYPES.CHOCOLATE, props.i18n.get('chocolate')],
     ]);
   }
 
@@ -28,8 +28,8 @@ class SprintfComponent extends React.Component {
 }
 
 SprintfComponent.propTypes = {
-  type: React.PropTypes.number,
-  i18n: React.PropTypes.object,
+  type: React.PropTypes.number.isRequired,
+  i18n: React.PropTypes.object.isRequired,
 };
 
 module.exports = SprintfComponent;

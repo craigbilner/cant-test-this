@@ -14,6 +14,7 @@ const chocolateProps = {
   type: TYPES.CHOCOLATE,
   i18n: new Map([
     ['foodStuff', 'I really love %(foodStuff)s'],
+    ['chocolate', 'choccy'],
   ]),
 };
 
@@ -32,7 +33,7 @@ const CHOCOLATE_PROXY_TEST = proxyTester.addFlavour('CHOCOLATE_PROXY_TEST', choc
 describe('the Sprintf component tests should', () => {
   it('test the actual output', () => {
     const actual = CHOCOLATE_TEST.component.value;
-    const expected = 'I really love chocolate';
+    const expected = 'I really love choccy';
 
     assert.deepEqual(actual, expected);
   });
@@ -48,6 +49,7 @@ describe('the Sprintf component tests should', () => {
 
     const STUB_TEST = sinonTester.addFlavour('STUB_TEST', {
       type: TYPES.CHOCOLATE,
+      i18n: new Map(),
     });
 
     const actual = STUB_TEST.component.value;
